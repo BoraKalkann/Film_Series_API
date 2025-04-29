@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Film_Dizi_API.props" />
+</Project>
