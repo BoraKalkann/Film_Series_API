@@ -72,3 +72,16 @@ C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\obj\Debug\n
 C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\obj\Debug\net8.0\Film_Dizi_API.pdb
 C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\obj\Debug\net8.0\Film_Dizi_API.genruntimeconfig.cache
 C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\obj\Debug\net8.0\ref\Film_Dizi_API.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\MONSTER\Desktop\ASP.Net_Project\Film_Dizi_API\Film_Dizi_API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

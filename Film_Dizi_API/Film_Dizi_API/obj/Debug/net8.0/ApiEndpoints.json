@@ -27,7 +27,7 @@
   },
   {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
-    "Method": "DeleteAllMovies",
+    "Method": "DeleteAllFilms",
     "RelativePath": "api/Films",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -74,7 +74,7 @@
   },
   {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
-    "Method": "DeleteOneMovie",
+    "Method": "DeleteOneFilm",
     "RelativePath": "api/Films/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -83,6 +83,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "PartiallyUpdateOneFilm",
+    "RelativePath": "api/Films/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "filmPatch",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
         "IsRequired": true
       }
     ],

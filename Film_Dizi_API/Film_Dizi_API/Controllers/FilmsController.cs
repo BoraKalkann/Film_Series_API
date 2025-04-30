@@ -1,6 +1,7 @@
 ﻿using Film_Dizi_API.Data;
 using Film_Dizi_API.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Film_Dizi_API.Controllers
@@ -65,18 +66,18 @@ namespace Film_Dizi_API.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteAllMovies()
+        public IActionResult DeleteAllFilms()
         {
             ApplicationContext.films.Clear();
             return NoContent();
         }
         [HttpDelete("{id:int}")]
-        public IActionResult DeleteOneMovie([FromRoute(Name ="id")]int id)
+        public IActionResult DeleteOneFilm([FromRoute(Name = "id")] int id)
         {
             var entity = ApplicationContext
                 .films.
                 Find(b => b.Id.Equals(id));
-            if(entity is null)
+            if (entity is null)
             {
                 return NotFound(new {
                     StatusCode = 404,
@@ -88,7 +89,15 @@ namespace Film_Dizi_API.Controllers
 
         }
 
+        [HttpPatch("{id:int}")]
+        public IActionResult PartiallyUpdateOneFilm([FromRoute(Name = "id")] int id, [FromBody] JsonPatchDocument<Films> filmPatch)
+        {
+            var entity = ApplicationContext.films.Find(b => b.Id.Equals(id));
+            if (entity is null)
+                return NotFound();
+            filmPatch.ApplyTo(entity);
+            return NoContent();
+        }
 
-        
     }
 }
