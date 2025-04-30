@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Film_Dizi_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca40cde759a1d8934e36ce4039a5f75b9209f57d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6892fe2b69374428a2896321555eb5ae3107364")]
 [assembly: System.Reflection.AssemblyProductAttribute("Film_Dizi_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Film_Dizi_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

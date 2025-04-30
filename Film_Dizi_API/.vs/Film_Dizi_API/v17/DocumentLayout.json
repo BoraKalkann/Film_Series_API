@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Film_Dizi_API\\Data\\ApplicationContext.cs",
               "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Data\\ApplicationContext.cs",
               "RelativeToolTip": "Film_Dizi_API\\Data\\ApplicationContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T19:34:26.761Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "Film_Dizi_API\\Controllers\\FilmsController.cs",
               "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Controllers\\FilmsController.cs",
               "RelativeToolTip": "Film_Dizi_API\\Controllers\\FilmsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACAAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T19:29:52.811Z",
               "EditorCaption": ""
@@ -60,7 +60,8 @@
               "RelativeToolTip": "Film_Dizi_API\\Models\\Films.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T19:27:20.619Z"
+              "WhenOpened": "2025-04-29T19:27:20.619Z",
+              "EditorCaption": ""
             }
           ]
         }

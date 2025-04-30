@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
-    "Method": "GetAllBooks",
+    "Method": "GetAllFilms",
     "RelativePath": "api/Films",
     "HttpMethod": "GET",
     "IsController": true,
@@ -11,7 +11,23 @@
   },
   {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
-    "Method": "GetOneBook",
+    "Method": "CreateOneFilm",
+    "RelativePath": "api/Films",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "film",
+        "Type": "Film_Dizi_API.Models.Films",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "GetOneFilm",
     "RelativePath": "api/Films/id:int",
     "HttpMethod": "GET",
     "IsController": true,

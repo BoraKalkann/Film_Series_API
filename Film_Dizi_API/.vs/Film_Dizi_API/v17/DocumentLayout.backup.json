@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\",
+  "WorkspaceRootPath": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net project\\film_dizi_api\\film_dizi_api\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|solutionrelative:film_dizi_api\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net project\\film_dizi_api\\film_dizi_api\\controllers\\filmscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net_project\\film_dizi_api\\film_dizi_api\\controllers\\filmscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|solutionrelative:film_dizi_api\\controllers\\filmscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net project\\film_dizi_api\\film_dizi_api\\models\\films.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net_project\\film_dizi_api\\film_dizi_api\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|solutionrelative:film_dizi_api\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|c:\\users\\monster\\desktop\\asp.net_project\\film_dizi_api\\film_dizi_api\\models\\films.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FBA1DE2-E2C9-45C5-B9D3-436E8262DED9}|Film_Dizi_API\\Film_Dizi_API.csproj|solutionrelative:film_dizi_api\\models\\films.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ApplicationContext.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Data\\ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Data\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "Film_Dizi_API\\Data\\ApplicationContext.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Data\\ApplicationContext.cs",
-              "RelativeToolTip": "Film_Dizi_API\\Data\\ApplicationContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Data\\ApplicationContext.cs*",
+              "RelativeToolTip": "Film_Dizi_API\\Data\\ApplicationContext.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T19:34:26.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FilmsController.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Controllers\\FilmsController.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Controllers\\FilmsController.cs",
               "RelativeDocumentMoniker": "Film_Dizi_API\\Controllers\\FilmsController.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Controllers\\FilmsController.cs",
-              "RelativeToolTip": "Film_Dizi_API\\Controllers\\FilmsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Controllers\\FilmsController.cs*",
+              "RelativeToolTip": "Film_Dizi_API\\Controllers\\FilmsController.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T19:29:52.811Z",
               "EditorCaption": ""
@@ -54,9 +54,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Films.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Models\\Films.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Models\\Films.cs",
               "RelativeDocumentMoniker": "Film_Dizi_API\\Models\\Films.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net Project\\Film_Dizi_API\\Film_Dizi_API\\Models\\Films.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\Desktop\\ASP.Net_Project\\Film_Dizi_API\\Film_Dizi_API\\Models\\Films.cs",
               "RelativeToolTip": "Film_Dizi_API\\Models\\Films.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

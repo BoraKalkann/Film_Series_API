@@ -1,4 +1,5 @@
 ﻿using Film_Dizi_API.Data;
+using Film_Dizi_API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,6 +27,23 @@ namespace Film_Dizi_API.Controllers
                 return NotFound();
             
             return Ok(film);
+        }
+
+        [HttpPost]
+        public IActionResult CreateOneFilm([FromBody]Films film)
+        {
+            try
+            {
+                if (film is null)
+                    return BadRequest();//400 Bad Req Üretecek
+                ApplicationContext.films.Add(film);
+                return StatusCode(201, film);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
         }
     }
 }
