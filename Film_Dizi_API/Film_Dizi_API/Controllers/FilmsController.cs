@@ -9,13 +9,13 @@ namespace Film_Dizi_API.Controllers
     public class FilmsController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAllBooks()
+        public IActionResult GetAllFilms()
         {
             var films = ApplicationContext.films;
             return Ok(films);
         }
         [HttpGet("id:int")]
-        public IActionResult GetOneBook([FromRoute(Name ="id")]int id)
+        public IActionResult GetOneFilm([FromRoute(Name ="id")]int id)
         {
             var film = ApplicationContext.films.
                 Where(b=>b.Id.Equals(id)).
