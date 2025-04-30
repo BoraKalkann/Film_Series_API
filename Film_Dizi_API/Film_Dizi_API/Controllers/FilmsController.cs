@@ -63,5 +63,32 @@ namespace Film_Dizi_API.Controllers
 
             return Ok(entity); // Return the updated film
         }
+
+        [HttpDelete]
+        public IActionResult DeleteAllMovies()
+        {
+            ApplicationContext.films.Clear();
+            return NoContent();
+        }
+        [HttpDelete("{id:int}")]
+        public IActionResult DeleteOneMovie([FromRoute(Name ="id")]int id)
+        {
+            var entity = ApplicationContext
+                .films.
+                Find(b => b.Id.Equals(id));
+            if(entity is null)
+            {
+                return NotFound(new {
+                    StatusCode = 404,
+                    message = $"Book with this id ({id}) does not found. "
+                });
+            }
+            ApplicationContext.films.Remove(entity);
+            return NoContent();
+
+        }
+
+
+        
     }
 }
