@@ -28,7 +28,7 @@
   {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
     "Method": "GetOneFilm",
-    "RelativePath": "api/Films/id:int",
+    "RelativePath": "api/Films/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -36,7 +36,28 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "UpdateOneFilm",
+    "RelativePath": "api/Films/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "film",
+        "Type": "Film_Dizi_API.Models.Films",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

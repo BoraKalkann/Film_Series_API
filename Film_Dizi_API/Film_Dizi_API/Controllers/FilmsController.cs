@@ -15,22 +15,22 @@ namespace Film_Dizi_API.Controllers
             var films = ApplicationContext.films;
             return Ok(films);
         }
-        [HttpGet("id:int")]
-        public IActionResult GetOneFilm([FromRoute(Name ="id")]int id)
+        [HttpGet("{id:int}")]
+        public IActionResult GetOneFilm([FromRoute(Name = "id")] int id)
         {
             var film = ApplicationContext.films.
-                Where(b=>b.Id.Equals(id)).
+                Where(b => b.Id.Equals(id)).
                 SingleOrDefault();
-            
+
 
             if (film is null)
                 return NotFound();
-            
+
             return Ok(film);
         }
 
         [HttpPost]
-        public IActionResult CreateOneFilm([FromBody]Films film)
+        public IActionResult CreateOneFilm([FromBody] Films film)
         {
             try
             {
@@ -44,6 +44,24 @@ namespace Film_Dizi_API.Controllers
                 return BadRequest(ex.Message);
             }
 
+        }
+
+        [HttpPut("{id:int}")]
+        public IActionResult UpdateOneFilm([FromRoute(Name = "id")] int id, [FromBody] Films film)
+        {
+            // Check if the film exists
+            var entity = ApplicationContext.films.Find(b => b.Id.Equals(id));
+            if (entity is null)
+                return NotFound(); // Return 404 if the film is not found
+
+            if (id != film.Id)
+                return BadRequest("ID in the route and body do not match."); // Return 400 if IDs mismatch
+
+            // Update the existing film
+            entity.Title = film.Title;
+            entity.ReleaseDate = film.ReleaseDate;
+
+            return Ok(entity); // Return the updated film
         }
     }
 }

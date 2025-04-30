@@ -46,7 +46,7 @@
         }
       }
     },
-    "/api/Films/id:int": {
+    "/api/Films/{id}": {
       "get": {
         "tags": [
           "Films"
@@ -62,6 +62,46 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Films"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Films"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Films"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Films"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
