@@ -121,7 +121,7 @@
   },
   {
     "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
-    "Method": "CreateOneFilm",
+    "Method": "CreateOneSerie",
     "RelativePath": "api/Series",
     "HttpMethod": "POST",
     "IsController": true,
@@ -137,6 +137,16 @@
   },
   {
     "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "DeleteAllSeries",
+    "RelativePath": "api/Series",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
     "Method": "GetOneSerie",
     "RelativePath": "api/Series/{id}",
     "HttpMethod": "GET",
@@ -146,6 +156,64 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "UpdateOneSerie",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "serie",
+        "Type": "Film_Dizi_API.Models.Film_Dizi_API.Models.Series",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "DeleteOneSerie",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "PartiallyUpdateOneSerie",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seriePatch",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
         "IsRequired": true
       }
     ],
