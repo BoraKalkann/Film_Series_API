@@ -485,6 +485,14 @@
           "publisher": {
             "type": "string",
             "nullable": true
+          },
+          "genre": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
