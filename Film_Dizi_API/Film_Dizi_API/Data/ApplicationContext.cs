@@ -12,10 +12,14 @@ namespace Film_Dizi_API.Data
             films = new List<Films>()
             {
                 new Films(){Id=1,Title="The Last Black",ReleaseDate=1945,Genre="Horror",Rating=5},
-                new Films(){Id=1,Title="The Last Black 2",ReleaseDate=1945,Genre="Horror",Rating=5},
-                new Films(){Id=2,Title="Return Of The Goerge Floyd",ReleaseDate=2005,Genre="Thrill",Rating=3},
-                new Films(){Id=3,Title="Elaziz's Birth-Remake",ReleaseDate=2002,Genre="Animation",Rating=5},
-                new Films(){Id=3,Title="Elaziz's Birth 2",ReleaseDate=2002,Genre="Animation",Rating=5}
+                new Films(){Id=2,Title="The Last Black 2",ReleaseDate=1945,Genre="Horror",Rating=5},
+                new Films(){Id=3,Title="Return Of The Goerge Floyd",ReleaseDate=2005,Genre="Thrill",Rating=3},
+                new Films(){Id=4,Title="Elaziz's Birth-Remake",ReleaseDate=2002,Genre="Animation",Rating=5},
+                new Films(){Id=5,Title="Elaziz's Birth 2",ReleaseDate=2002,Genre="Animation",Rating=5},
+                new Films(){Id=7,Title="Fight Club",ReleaseDate=2000,Genre="Action",Rating=5},
+                new Films(){Id=8,Title="AA Emre's OOP ",ReleaseDate=1999,Genre="Thrill",Rating=1},
+                new Films(){Id=9,Title="New World",ReleaseDate=1983,Genre="Horror",Rating=3.4},
+                new Films(){Id=10,Title="Green Road",ReleaseDate=2001,Genre="Drama",Rating=4.6}
             };
             series = new List<Series>()
             {
