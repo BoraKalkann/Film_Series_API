@@ -426,6 +426,14 @@
           "releaseDate": {
             "type": "integer",
             "format": "int32"
+          },
+          "genre": {
+            "type": "string",
+            "nullable": true
+          },
+          "rating": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
