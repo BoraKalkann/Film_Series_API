@@ -81,7 +81,7 @@ namespace Film_Dizi_API.Controllers
             {
                 return NotFound(new {
                     StatusCode = 404,
-                    message = $"Book with this id ({id}) does not found. "
+                    message = $"Film with this id ({id}) does not found. "
                 });
             }
             ApplicationContext.films.Remove(entity);
