@@ -1,5 +1,115 @@
 [
   {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "GetAllActors",
+    "RelativePath": "api/Actors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "CreateOneActor",
+    "RelativePath": "api/Actors",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actor",
+        "Type": "Film_Dizi_API.Models.Actors",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "DeleteAllActors",
+    "RelativePath": "api/Actors",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "GetOneActor",
+    "RelativePath": "api/Actors/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "UpdateOneActor",
+    "RelativePath": "api/Actors/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "actor",
+        "Type": "Film_Dizi_API.Models.Actors",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "DeleteOneActor",
+    "RelativePath": "api/Actors/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "PartiallyUpdateOneActor",
+    "RelativePath": "api/Actors/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "actorPatch",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
     "Method": "GetAllFilms",
     "RelativePath": "api/Films",
