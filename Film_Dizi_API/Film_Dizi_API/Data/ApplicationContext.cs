@@ -7,6 +7,8 @@ namespace Film_Dizi_API.Data
     {
         public static List<Series> series { get; set; }
         public static List<Films> films { get; set; }  
+
+        public static List<Actors> actors { get; set; }
         static ApplicationContext()
         {
             films = new List<Films>()
@@ -33,6 +35,14 @@ namespace Film_Dizi_API.Data
                 new Series(){Id=8,Title="Wednesday",Publisher="Netflix",Seasons=2,Genre="Drama",Rating=4.2},
                 new Series(){Id=9,Title="Walking Dead",Publisher="Netflix",Seasons=6,Genre="Action",Rating = 3.9},
                 new Series(){Id=10,Title="Teen Wolf",Publisher="Digiturk",Seasons=3,Genre="Dramam",Rating = 2.1}
+            };
+            actors = new List<Actors>()
+            {
+                new Actors(){Id=1,Name="Elaziz",Surname="Kaya",BirthDate=new DateTime(1999,10,10),BirthPlace="Turkey"},
+                new Actors(){Id=2,Name="Samet",Surname="Kaya",BirthDate=new DateTime(1978,02,11),BirthPlace="Turkey"},
+                new Actors(){Id=3,Name="Emre",Surname="Gürbüz",BirthDate=new DateTime(1966,02,03),BirthPlace="Turkey"},
+                new Actors(){Id=4,Name="Ali",Surname="Çetinkaya",BirthDate=new DateTime(2001,02,11),BirthPlace="Turkey"},
+                new Actors(){Id=5,Name="Mehmet",Surname="Deniz",BirthDate=new DateTime(1978,09,18),BirthPlace="Turkey"},
             };
         }
     }
