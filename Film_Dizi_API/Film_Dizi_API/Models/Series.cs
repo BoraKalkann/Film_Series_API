@@ -1,18 +1,23 @@
-﻿namespace Film_Dizi_API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Film_Dizi_API.Models
 {
-    namespace Film_Dizi_API.Models
+    public class Series
     {
-        public class Series
-        {
-            public int Id { get; set; }
-            public string Title { get; set; } = string.Empty; 
-            public int Seasons { get; set; }
-            public string Publisher { get; set; } = string.Empty;
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string PosterUrl { get; set; }
+        public decimal Rating { get; set; }
+        public string Genre { get; set; }
+        public int SeasonCount { get; set; }
+        public int EpisodeCount { get; set; }
+        public string Status { get; set; }
+        public string Creator {  get; set; }
 
-            public string Genre { get; set; } = string.Empty;
 
-            public double Rating { get; set; }
-        }
+        public List<Comment> Comments { get; set; } = new List<Comment>();
+        
     }
-
 }
