@@ -8,7 +8,7 @@
     "/api/Actors": {
       "get": {
         "tags": [
-          "Actors"
+          "Actor"
         ],
         "responses": {
           "200": {
@@ -18,42 +18,32 @@
       },
       "post": {
         "tags": [
-          "Actors"
+          "Actor"
         ],
         "requestBody": {
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/CreateActorDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/CreateActorDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/CreateActorDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/CreateActorDto"
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Actors"
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -64,7 +54,7 @@
     "/api/Actors/{id}": {
       "get": {
         "tags": [
-          "Actors"
+          "Actor"
         ],
         "parameters": [
           {
@@ -85,7 +75,7 @@
       },
       "put": {
         "tags": [
-          "Actors"
+          "Actor"
         ],
         "parameters": [
           {
@@ -102,22 +92,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/UpdateActorDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/UpdateActorDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/UpdateActorDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Actors"
+                "$ref": "#/components/schemas/UpdateActorDto"
               }
             }
           }
@@ -130,7 +120,42 @@
       },
       "delete": {
         "tags": [
-          "Actors"
+          "Actor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments": {
+      "get": {
+        "tags": [
+          "Comment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments/{id}": {
+      "get": {
+        "tags": [
+          "Comment"
         ],
         "parameters": [
           {
@@ -149,9 +174,9 @@
           }
         }
       },
-      "patch": {
+      "put": {
         "tags": [
-          "Actors"
+          "Comment"
         ],
         "parameters": [
           {
@@ -168,34 +193,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
+                "$ref": "#/components/schemas/UpdateCommentDto"
               }
             },
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
+                "$ref": "#/components/schemas/UpdateCommentDto"
               }
             },
             "text/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
+                "$ref": "#/components/schemas/UpdateCommentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
+                "$ref": "#/components/schemas/UpdateCommentDto"
               }
             }
           }
@@ -205,93 +218,37 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Films": {
-      "get": {
+      },
+      "delete": {
         "tags": [
-          "Films"
+          "Comment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Comments/{actorId}": {
       "post": {
         "tags": [
-          "Films"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Films"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Films"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Films"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Films"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Films"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Films/{id}": {
-      "get": {
-        "tags": [
-          "Films"
+          "Comment"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Films"
-        ],
-        "parameters": [
-          {
-            "name": "id",
+            "name": "actorId",
             "in": "path",
             "required": true,
             "schema": {
@@ -304,302 +261,22 @@
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/Films"
+                "$ref": "#/components/schemas/CreateCommentDto"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Films"
+                "$ref": "#/components/schemas/CreateCommentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Films"
+                "$ref": "#/components/schemas/CreateCommentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Films"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Films"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Films"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Series": {
-      "get": {
-        "tags": [
-          "Series"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Series"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Series"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Series/{id}": {
-      "get": {
-        "tags": [
-          "Series"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Series"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Series"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Series"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Series"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json-patch+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "text/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                }
+                "$ref": "#/components/schemas/CreateCommentDto"
               }
             }
           }
@@ -614,121 +291,89 @@
   },
   "components": {
     "schemas": {
-      "Actors": {
+      "CreateActorDto": {
+        "required": [
+          "biography",
+          "name"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
           },
-          "surname": {
+          "biography": {
+            "maxLength": 500,
+            "minLength": 1,
+            "type": "string"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCommentDto": {
+        "required": [
+          "content",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 280,
+            "minLength": 5,
+            "type": "string"
+          },
+          "content": {
+            "maxLength": 280,
+            "minLength": 5,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateActorDto": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "biography": {
             "type": "string",
             "nullable": true
           },
           "birthDate": {
             "type": "string",
-            "format": "date-time"
-          },
-          "birthPlace": {
-            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Films": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "releaseDate": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "genre": {
-            "type": "string",
-            "nullable": true
-          },
-          "rating": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Operation": {
-        "type": "object",
-        "properties": {
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
-          },
-          "path": {
-            "type": "string",
-            "nullable": true
-          },
-          "op": {
-            "type": "string",
-            "nullable": true
-          },
-          "from": {
-            "type": "string",
-            "nullable": true
-          },
-          "value": {
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "OperationType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
+      "UpdateCommentDto": {
+        "required": [
+          "content",
+          "title"
         ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "Series": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "title": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 280,
+            "minLength": 5,
+            "type": "string"
           },
-          "seasons": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "publisher": {
-            "type": "string",
-            "nullable": true
-          },
-          "genre": {
-            "type": "string",
-            "nullable": true
-          },
-          "rating": {
-            "type": "number",
-            "format": "double"
+          "content": {
+            "maxLength": 280,
+            "minLength": 5,
+            "type": "string"
           }
         },
         "additionalProperties": false
