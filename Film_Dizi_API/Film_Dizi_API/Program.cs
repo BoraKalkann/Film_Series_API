@@ -1,7 +1,9 @@
 using Film_Dizi_API.Data;
+using Film_Dizi_API.Interfaces;
 using Film_Dizi_API.Models;
 using Film_Dizi_API.Repositories.Contracts;
 using Film_Dizi_API.Repositories.Repository;
+using Film_Dizi_API.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(options => options.Serialize
 
 builder.Services.AddScoped<IActorRepository, ActorRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
     options.Password.RequireDigit = true;

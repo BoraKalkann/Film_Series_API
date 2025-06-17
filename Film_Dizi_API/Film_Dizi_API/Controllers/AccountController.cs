@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Film_Dizi_API.DTOs.Account;
-using Film_Dizi_API.Data;   
+using Film_Dizi_API.Data;
+using Film_Dizi_API.Interfaces;
 
 namespace Film_Dizi_API.Controllers
 {
@@ -11,9 +12,11 @@ namespace Film_Dizi_API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<User> _userManager;
-        public AccountController(UserManager<User> userManager)
+        private readonly ITokenService _tokenService;
+        public AccountController(UserManager<User> userManager,ITokenService tokenService)
         {
             _userManager = userManager;
+            _tokenService = tokenService;
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
@@ -36,7 +39,16 @@ namespace Film_Dizi_API.Controllers
                     var roleResult = await _userManager.AddToRoleAsync(User, "User");
                     if (roleResult.Succeeded)
                     {
-                        return Ok("User Created!");
+                        return Ok(
+                            new NewUserDto
+                            {
+                                UserName = User.UserName,
+                                Email = User.Email,
+                                Token = _tokenService.CreateToken(User)
+                            }
+
+                            );
+
                     }
                     else
                     {
