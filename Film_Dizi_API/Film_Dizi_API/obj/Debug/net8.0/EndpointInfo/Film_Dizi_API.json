@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Film_Dizi_API",
-    "version": "1.0"
+    "title": "Film Dizi API",
+    "version": "v1"
   },
   "paths": {
     "/api/account/login": {
@@ -492,6 +492,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT token giriniz. Örnek: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
