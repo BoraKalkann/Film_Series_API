@@ -8,9 +8,7 @@ namespace Film_Dizi_API.Models
         [Required]
         public string Title { get; set; }
         public string Description { get; set; }
-        public string PosterUrl { get; set; }
         public decimal Rating { get; set; }
-        public string Genre { get; set; }
         public int SeasonCount { get; set; }
         public int EpisodeCount { get; set; }
         public string Status { get; set; }
@@ -18,6 +16,10 @@ namespace Film_Dizi_API.Models
 
 
         public List<Comment> Comments { get; set; } = new List<Comment>();
+
+        public List<Actor> Actors { get; set; } = new List<Actor> { };
+
+        public List<Genre> Genres { get; set; } = new List<Genre>();
         
     }
 }

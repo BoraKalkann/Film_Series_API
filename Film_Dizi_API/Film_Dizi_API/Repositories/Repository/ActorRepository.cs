@@ -1,7 +1,9 @@
 ﻿using Film_Dizi_API.Data;
 using Film_Dizi_API.DTOs.Actor;
+using Film_Dizi_API.Helpers;
 using Film_Dizi_API.Models;
 using Film_Dizi_API.Repositories.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +21,6 @@ namespace Film_Dizi_API.Repositories.Repository
         {
             return await _context.Actors.AnyAsync(a => a.Id == id);
         }
-
         public async Task<Actor> CreateActorAysnc(Actor actor)
         {
             await _context.Actors.AddAsync(actor);
@@ -47,13 +48,35 @@ namespace Film_Dizi_API.Repositories.Repository
             return await _context.Actors.Include(c => c.Comments).FirstOrDefaultAsync(i => i.Id.Equals(id));
         }
 
-        public async Task<List<Actor>> GetAllActorsAsync()
+        public async Task<List<Actor>> GetAllActorsAsync(QueryObject query)
         {
-            return await _context.Actors.Include(c => c.Comments).ToListAsync();
+            var actors =  _context.Actors.Include(c => c.Comments).AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(query.Name))
+            {
+                actors = actors.Where(s => s.Name.Contains(query.Name));
+            }
+
+            if (!string.IsNullOrWhiteSpace(query.SortBy))
+            {
+                if(query.SortBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    actors = query.IsDecsending ? actors.OrderByDescending(s => s.Name) : actors.OrderBy(s => s.Name);
+                }
+                else if(query.SortBy.Equals("BirthDate", StringComparison.OrdinalIgnoreCase))
+                {
+                    actors = query.IsDecsending ? actors.OrderByDescending(s => s.BirthDate) : actors.OrderBy(s => s.BirthDate);
+                }
+            }
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await actors.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
-        public async Task<Actor> UpdateActorAysnc(int id, UpdateActorDto actorDto)
+        public async Task<Actor> UpdateActorAsync(int id, UpdateActorDto actorDto)
         {
+            
             var existingActor = await _context.Actors.FirstOrDefaultAsync(a => a.Id.Equals(id));
 
             if (existingActor is null)
@@ -68,7 +91,6 @@ namespace Film_Dizi_API.Repositories.Repository
             await _context.SaveChangesAsync();
 
             return existingActor;
-
         }
     }
 }

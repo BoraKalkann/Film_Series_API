@@ -10,5 +10,7 @@
         public Actor? Actor { get; set; }
         public int? SeriesId { get; set; }
         public Series? Series { get; set; }
+        public int? FilmId { get; set; }
+        public Film? Film { get; set; }
     }
 }

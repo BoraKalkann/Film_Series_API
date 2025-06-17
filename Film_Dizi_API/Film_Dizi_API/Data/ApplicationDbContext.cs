@@ -14,6 +14,7 @@ namespace Film_Dizi_API.Data
         public DbSet<Film> Films { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Series> Series { get; set; }
 
       
         

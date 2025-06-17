@@ -1,18 +1,44 @@
 [
   {
-    "ContainingType": "Film_Dizi_API.Controllers.ActorController",
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
     "Method": "GetAllActors",
-    "RelativePath": "api/Actors",
+    "RelativePath": "api/Actorss",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDecsending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.ActorController",
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
     "Method": "CreateOneActor",
-    "RelativePath": "api/Actors",
+    "RelativePath": "api/Actorss",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +52,66 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.ActorController",
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "AddCommentToFilm",
+    "RelativePath": "api/Actorss/{actorId}/comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createCommentDto",
+        "Type": "Film_Dizi_API.DTOs.Comment.CreateCommentForModelsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Film_Dizi_API.DTOs.Comment.CommentDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
+    "Method": "GetFilmComments",
+    "RelativePath": "api/Actorss/{actorId}/comments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Film_Dizi_API.DTOs.Comment.CommentDto, Film_Dizi_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
     "Method": "GetActorById",
-    "RelativePath": "api/Actors/{id}",
+    "RelativePath": "api/Actorss/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +125,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.ActorController",
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
     "Method": "UpdateActor",
-    "RelativePath": "api/Actors/{id}",
+    "RelativePath": "api/Actorss/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +146,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.ActorController",
+    "ContainingType": "Film_Dizi_API.Controllers.ActorsController",
     "Method": "DeleteActor",
-    "RelativePath": "api/Actors/{id}",
+    "RelativePath": "api/Actorss/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -79,9 +162,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.CommentController",
+    "ContainingType": "Film_Dizi_API.Controllers.CommentsController",
     "Method": "GetAllComments",
-    "RelativePath": "api/Comments",
+    "RelativePath": "api/Commentss",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -89,9 +172,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.CommentController",
+    "ContainingType": "Film_Dizi_API.Controllers.CommentsController",
     "Method": "CreateComment",
-    "RelativePath": "api/Comments/{actorId}",
+    "RelativePath": "api/Commentss/{actorId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -110,9 +193,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.CommentController",
+    "ContainingType": "Film_Dizi_API.Controllers.CommentsController",
     "Method": "GetCommentById",
-    "RelativePath": "api/Comments/{id}",
+    "RelativePath": "api/Commentss/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -126,9 +209,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.CommentController",
+    "ContainingType": "Film_Dizi_API.Controllers.CommentsController",
     "Method": "UpdateComment",
-    "RelativePath": "api/Comments/{id}",
+    "RelativePath": "api/Commentss/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -147,9 +230,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Film_Dizi_API.Controllers.CommentController",
+    "ContainingType": "Film_Dizi_API.Controllers.CommentsController",
     "Method": "DeleteComment",
-    "RelativePath": "api/Comments/{id}",
+    "RelativePath": "api/Commentss/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -161,5 +244,329 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "GetAllFilms",
+    "RelativePath": "api/Filmss",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDecsending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "CreateFilm",
+    "RelativePath": "api/Filmss",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filmDto",
+        "Type": "Film_Dizi_API.DTOs.Film.CreateFilmDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "AddCommentToFilm",
+    "RelativePath": "api/Filmss/{filmId}/comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filmId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createCommentDto",
+        "Type": "Film_Dizi_API.DTOs.Comment.CreateCommentForModelsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Film_Dizi_API.DTOs.Comment.CommentDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "GetFilmComments",
+    "RelativePath": "api/Filmss/{filmId}/comments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filmId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Film_Dizi_API.DTOs.Comment.CommentDto, Film_Dizi_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "GetFilmById",
+    "RelativePath": "api/Filmss/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "UpdateFilm",
+    "RelativePath": "api/Filmss/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "filmModel",
+        "Type": "Film_Dizi_API.DTOs.Film.UpdateFilmDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.FilmsController",
+    "Method": "DeleteFilm",
+    "RelativePath": "api/Filmss/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "GetAllSeries",
+    "RelativePath": "api/Series",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsDecsending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "CreateSerie",
+    "RelativePath": "api/Series",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seriesDto",
+        "Type": "Film_Dizi_API.DTOs.Series.CreateSeriesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "GetSeriesById",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "UpdateSeries",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "seriesModel",
+        "Type": "Film_Dizi_API.DTOs.Series.UpdateSeriesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "DeleteSerie",
+    "RelativePath": "api/Series/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "AddCommentToFilm",
+    "RelativePath": "api/Series/{seriesId}/comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seriesId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createCommentDto",
+        "Type": "Film_Dizi_API.DTOs.Comment.CreateCommentForModelsDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Film_Dizi_API.DTOs.Comment.CommentDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Film_Dizi_API.Controllers.SeriesController",
+    "Method": "GetFilmComments",
+    "RelativePath": "api/Series/{seriesId}/comments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seriesId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Film_Dizi_API.DTOs.Comment.CommentDto, Film_Dizi_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

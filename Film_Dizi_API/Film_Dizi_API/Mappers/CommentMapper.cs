@@ -16,6 +16,7 @@ namespace Film_Dizi_API.Mappers
                 CreatedOn = commentModel.CreatedOn,
                 ActorId = commentModel.ActorId,
                 SeriesId = commentModel.SeriesId,
+                
             };
         }
 

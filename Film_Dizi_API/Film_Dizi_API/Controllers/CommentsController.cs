@@ -7,11 +7,11 @@ namespace Film_Dizi_API.Controllers
 {
     [Route("api/[controller]s")]
     [ApiController]
-    public class CommentController : ControllerBase
+    public class CommentsController : ControllerBase
     {
         private readonly ICommentRepository _commentRepo;
         private readonly IActorRepository _actorRepo;
-        public CommentController(ICommentRepository commentRepo, IActorRepository actorRepo)
+        public CommentsController(ICommentRepository commentRepo, IActorRepository actorRepo)
         {
             _commentRepo = commentRepo;
             _actorRepo = actorRepo;

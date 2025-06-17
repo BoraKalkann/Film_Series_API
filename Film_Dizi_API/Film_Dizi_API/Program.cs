@@ -22,6 +22,8 @@ builder.Services.AddControllers().AddNewtonsoftJson(options => options.Serialize
 
 builder.Services.AddScoped<IActorRepository, ActorRepository>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IFilmRepository, FilmRepository>();
+builder.Services.AddScoped<ISeriesRepository, SeriesRepository>();
 
 var app = builder.Build();
 

@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Film\" />
-    <Folder Include="DTOs\Series\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
