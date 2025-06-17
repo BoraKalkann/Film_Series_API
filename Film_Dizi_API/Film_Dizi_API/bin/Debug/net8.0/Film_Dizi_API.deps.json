@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v8.0": {
       "Film_Dizi_API/1.0.0": {
         "dependencies": {
-          "Identity.Core": "1.2.7",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
           "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.3.0",
@@ -62,20 +61,6 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
-          }
-        }
-      },
-      "Identity.Core/1.2.7": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "8.0.0",
-          "Microsoft.Extensions.Logging": "9.0.6",
-          "Microsoft.Extensions.Options": "9.0.6",
-          "System.ComponentModel.Annotations": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Identity.Core.dll": {
-            "assemblyVersion": "1.2.7.0",
-            "fileVersion": "1.2.7.0"
           }
         }
       },
@@ -1075,7 +1060,6 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
-      "System.ComponentModel.Annotations/4.5.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -1365,13 +1349,6 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
-    },
-    "Identity.Core/1.2.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yWb3TmRoxp1OjsSl5yLSTGC+ZpQT24yQXRiyJ3pP6crly6yw6lxwAy6hNgKOvEamNwsRDUwed6GqKWgTkjQ3MQ==",
-      "path": "identity.core/1.2.7",
-      "hashPath": "identity.core.1.2.7.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.3.0": {
       "type": "package",
@@ -1939,13 +1916,6 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
-      "path": "system.componentmodel.annotations/4.5.0",
-      "hashPath": "system.componentmodel.annotations.4.5.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",

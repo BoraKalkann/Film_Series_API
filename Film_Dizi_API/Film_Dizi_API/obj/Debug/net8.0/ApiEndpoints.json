@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Film_Dizi_API.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "Film_Dizi_API.DTOs.Account.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Film_Dizi_API.Controllers.ActorController",
     "Method": "GetAllActors",
     "RelativePath": "api/Actors",
